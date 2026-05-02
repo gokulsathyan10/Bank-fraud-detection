@@ -29,13 +29,9 @@ class data_loader:
             self.acc_data = pd.read_csv(os.path.join(self.path, 'accounts.csv'))
             self.txn_data = pd.read_csv(os.path.join(self.path, 'transactions.csv'))
 
+            return self.cust_data, self.acc_data, self.txn_data
+
         except Exception as e:
             raise CustomException(e, sys)
 
-if __name__ == "__main__":
 
-    df_load = data_loader(PATH)
-    df_load.load_data()
-    print(df_load.cust_data.shape)
-    print(df_load.acc_data.shape)
-    print(df_load.txn_data.shape)
