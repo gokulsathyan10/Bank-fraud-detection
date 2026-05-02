@@ -1,0 +1,1 @@
+- [Pytest preferred over unittest](feedback_pytest.md) — user is setting up GitHub Actions CI; default to pytest style with fixtures
