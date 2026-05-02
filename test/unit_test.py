@@ -4,7 +4,7 @@ import sys
 import pandas as pd
 import pytest
 
-sys.path.append(os.path.dirname(__file__))
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from src.components.data_load import data_loader, PATH
 from src.components.data_transformation import data_cleaning
