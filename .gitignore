@@ -7,3 +7,5 @@ __pycache__/
 dist/
 build/
 data/transactions.csv
+.claude/
+mlflow.db
