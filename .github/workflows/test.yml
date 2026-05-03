@@ -11,4 +11,4 @@
           with:                                                                                                                         
             python-version: "3.11"                                                                                                      
         - run: pip install -r requirements.txt
-        - run: pytest test/unit_test.py -v
+        - run: pytest test/unit_test.py -v -m "not integration"

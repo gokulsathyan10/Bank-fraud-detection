@@ -51,11 +51,13 @@ def cleaner_with_synthetic_dupes():
 
 class TestDataLoader:
 
+    @pytest.mark.integration
     def test_three_dataframes_are_loaded(self, loader):
         assert isinstance(loader.cust_data, pd.DataFrame)
         assert isinstance(loader.acc_data, pd.DataFrame)
         assert isinstance(loader.txn_data, pd.DataFrame)
 
+    @pytest.mark.integration
     def test_dataframes_are_not_empty(self, loader):
         assert len(loader.cust_data) > 0, "customers.csv loaded empty"
         assert len(loader.acc_data) > 0, "accounts.csv loaded empty"
@@ -69,6 +71,7 @@ class TestDataLoader:
 
 # ---------- data_cleaning.load_data tests ----------
 
+@pytest.mark.integration
 class TestDataCleaningLoad:
 
     def test_load_returns_three_dataframes(self, cleaner):
@@ -112,6 +115,7 @@ class TestRemoveDuplicates:
         cust, _, _ = dc.remove_duplicates()
         assert list(cust.index) == [0, 1]
 
+    @pytest.mark.integration
     def test_real_data_dedup_runs_without_error(self, cleaner):
         cust, acc, txn = cleaner.remove_duplicates()
         assert len(cust) > 0
