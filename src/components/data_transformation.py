@@ -66,7 +66,7 @@ class data_cleaning:
             raise CustomException(e, sys)
 
 
-if __name__ == "__main__":
-    cleaner = data_cleaning()
-    cleaner.load_data()
-    cust_df, acc_df, txn_df = cleaner.remove_duplicates()
+# if __name__ == "__main__":
+#     cleaner = data_cleaning()
+#     cleaner.load_data()
+#     cust_df, acc_df, txn_df = cleaner.remove_duplicates()
