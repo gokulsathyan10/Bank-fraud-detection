@@ -9,3 +9,4 @@ build/
 data/transactions.csv
 .claude/
 mlflow.db
+memory/
