@@ -1,0 +1,1 @@
+This is a project for buliding a fraud detection algorithm and deploying the model

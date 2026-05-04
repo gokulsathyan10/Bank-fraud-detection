@@ -10,3 +10,4 @@ data/transactions.csv
 .claude/
 mlflow.db
 memory/
+logs/
